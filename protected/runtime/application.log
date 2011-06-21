@@ -1,0 +1,1104 @@
+2011/06/14 16:02:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.tbl_authassignment' doesn't exist. The SQL statement executed was: SELECT * FROM tbl_authassignment WHERE userid=:userid.
+2011/06/14 16:02:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.tbl_authassignment' doesn't exist. The SQL statement executed was: SELECT * FROM tbl_authassignment WHERE userid=:userid' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:518
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\web\auth\CDbAuthManager.php(304): CDbCommand->queryAll('SELECT * FROM t...')
+#2 C:\xampp\htdocs\yii\framework\web\auth\CDbAuthManager.php(72): CDbAuthManager->getAuthAssignments(NULL)
+#3 C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(774): CDbAuthManager->checkAccess('PostUpdateOwn', NULL, Array)
+#4 C:\xampp\htdocs\blog\protected\modules\rights\components\RWebUser.php(43): CWebUser->checkAccess('PostUpdateOwn', Array, true)
+#5 C:\xampp\htdocs\blog\protected\views\post\_view.php(21): RWebUser->checkAccess('PostUpdateOwn', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(234): CController->renderPartial('_view', Array)
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(158): CListView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}?{pager}')
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#14 C:\xampp\htdocs\yii\framework\web\CBaseController.php(166): CBaseListView->run()
+#15 C:\xampp\htdocs\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#16 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#17 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('index', Array, true)
+#20 C:\xampp\htdocs\blog\protected\controllers\PostController.php(141): CController->render('index', Array)
+#21 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PostController->actionIndex()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#27 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#29 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#31 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('')
+#32 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#33 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#34 {main} REQUEST_URI=/blog/
+2011/06/14 16:04:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.tbl_authassignment' doesn't exist. The SQL statement executed was: SELECT * FROM tbl_authassignment WHERE userid=:userid.
+2011/06/14 16:04:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.tbl_authassignment' doesn't exist. The SQL statement executed was: SELECT * FROM tbl_authassignment WHERE userid=:userid' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:518
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\web\auth\CDbAuthManager.php(304): CDbCommand->queryAll('SELECT * FROM t...')
+#2 C:\xampp\htdocs\yii\framework\web\auth\CDbAuthManager.php(72): CDbAuthManager->getAuthAssignments(NULL)
+#3 C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(774): CDbAuthManager->checkAccess('PostUpdateOwn', NULL, Array)
+#4 C:\xampp\htdocs\blog\protected\modules\rights\components\RWebUser.php(43): CWebUser->checkAccess('PostUpdateOwn', Array, true)
+#5 C:\xampp\htdocs\blog\protected\views\post\_view.php(21): RWebUser->checkAccess('PostUpdateOwn', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(234): CController->renderPartial('_view', Array)
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(158): CListView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}?{pager}')
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#14 C:\xampp\htdocs\yii\framework\web\CBaseController.php(166): CBaseListView->run()
+#15 C:\xampp\htdocs\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#16 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#17 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('index', Array, true)
+#20 C:\xampp\htdocs\blog\protected\controllers\PostController.php(141): CController->render('index', Array)
+#21 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PostController->actionIndex()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#27 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#29 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#31 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('')
+#32 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#33 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#34 {main} REQUEST_URI=/blog/
+2011/06/14 18:37:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/gii
+2011/06/14 19:02:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('rights')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/rights
+2011/06/14 20:28:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('rights')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/rights
+2011/06/14 22:22:43 [error] [php] include(Maintenance.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:396)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(147): import()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(139): CWidgetFactory->createWidget()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(165): PostController->createWidget()
+#3 C:\xampp\htdocs\blog\protected\views\layouts\column2.php(21): PostController->widget()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): PostController->renderInternal()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(781): PostController->renderFile()
+#7 C:\xampp\htdocs\blog\protected\controllers\PostController.php(141): PostController->render()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PostController->actionIndex()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): RightsFilter->filter()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): PostController->filterRights()
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): PostController->runActionWithFilters()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): PostController->run()
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/blog/index.php/post/index
+2011/06/14 22:34:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php:110
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php(121): CViewAction->resolveView('index')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(72): CViewAction->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(300): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('page')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#9 {main} REQUEST_URI=/blog/index.php/site/page
+2011/06/14 22:34:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php:110
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php(121): CViewAction->resolveView('index')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(72): CViewAction->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(300): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('page')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#9 {main} REQUEST_URI=/blog/index.php/site/page
+2011/06/14 22:34:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php:110
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php(121): CViewAction->resolveView('index')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(72): CViewAction->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(300): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('page')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#9 {main} REQUEST_URI=/blog/index.php/site/page
+2011/06/14 22:36:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php:110
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php(121): CViewAction->resolveView('index')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(72): CViewAction->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(300): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('page')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#9 {main} REQUEST_URI=/blog/index.php/site/page
+2011/06/14 22:51:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "home/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/home/index
+2011/06/14 22:51:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "home/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/home/index
+2011/06/14 22:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "home/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/home/index
+2011/06/14 22:53:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(262): CController->missingAction('')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('site')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#5 {main} REQUEST_URI=/blog/index.php/site
+2011/06/14 22:54:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "home/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/home/index
+2011/06/14 22:57:13 [error] [exception.CException] exception 'CException' with message 'HomeController não pôde encontrar a visão "home/index" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:875
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('home/index', NULL, true)
+#1 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(7): CController->render('home/index')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('index')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/index')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#10 {main} REQUEST_URI=/blog/index.php/home/index
+2011/06/14 22:57:52 [error] [exception.CException] exception 'CException' with message 'HomeController não pôde encontrar a visão "home/index" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:875
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('home/index', NULL, true)
+#1 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(7): CController->render('home/index')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('index')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/index')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#10 {main} REQUEST_URI=/blog/index.php/home/index
+2011/06/14 22:59:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php:110
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php(121): CViewAction->resolveView('index')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(72): CViewAction->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(300): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('page')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#9 {main} REQUEST_URI=/blog/index.php/site/page
+2011/06/14 23:03:32 [error] [exception.CException] exception 'CException' with message 'HomeController não pôde encontrar a visão "login" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:875
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('login', Array, true)
+#1 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(45): CController->render('login', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionLogin()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('login')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/login')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#10 {main} REQUEST_URI=/blog/index.php/home/login
+2011/06/14 23:58:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tests".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('tests')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/tests
+2011/06/14 23:58:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tests/functional".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('tests/functiona...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/tests/functional
+2011/06/14 23:59:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tests/functional/site".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('tests/functiona...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/tests/functional/site
+2011/06/14 23:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tests/functional/SiteTest.php".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('tests/functiona...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/tests/functional/SiteTest.php
+2011/06/15 16:49:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#3 {main} REQUEST_URI=/blog/index.php/gii
+2011/06/15 16:50:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.activerecordlog' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `activerecordlog`.
+2011/06/15 16:50:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.activerecordlog' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `activerecordlog`.
+2011/06/15 16:58:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(262): CController->missingAction('list')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('list')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('activerecordlog...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#5 {main} REQUEST_URI=/blog/index.php/activerecordlog/list
+2011/06/15 17:20:23 [error] [exception.CException] exception 'CException' with message 'User não possui um método chamado "search".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(213): CComponent->__call('search', Array)
+#1 C:\xampp\htdocs\blog\protected\views\user\admin.php(42): CActiveRecord->__call('search', Array)
+#2 C:\xampp\htdocs\blog\protected\views\user\admin.php(42): User->search()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('admin', Array, true)
+#7 C:\xampp\htdocs\blog\protected\controllers\UserController.php(148): CController->render('admin', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionAdmin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#21 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/15 17:28:09 [error] [exception.CException] exception 'CException' with message 'User não possui um método chamado "search".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(213): CComponent->__call('search', Array)
+#1 C:\xampp\htdocs\blog\protected\views\user\admin.php(42): CActiveRecord->__call('search', Array)
+#2 C:\xampp\htdocs\blog\protected\views\user\admin.php(42): User->search()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('admin', Array, true)
+#7 C:\xampp\htdocs\blog\protected\controllers\UserController.php(148): CController->render('admin', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionAdmin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#21 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/15 17:28:26 [error] [exception.CException] exception 'CException' with message 'User não possui um método chamado "search".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(213): CComponent->__call('search', Array)
+#1 C:\xampp\htdocs\blog\protected\views\user\admin.php(42): CActiveRecord->__call('search', Array)
+#2 C:\xampp\htdocs\blog\protected\views\user\admin.php(42): User->search()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('admin', Array, true)
+#7 C:\xampp\htdocs\blog\protected\controllers\UserController.php(148): CController->render('admin', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionAdmin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#21 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/15 19:30:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'O token CSRF não pode ser verificado.' in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:864
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CComponent.php(568): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(154): CApplication->onBeginRequest(Object(CEvent))
+#3 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#4 {main} REQUEST_URI=/blog/index.php/user/delete?id=3
+2011/06/15 19:31:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'O token CSRF não pode ser verificado.' in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:864
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CComponent.php(568): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(154): CApplication->onBeginRequest(Object(CEvent))
+#3 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#4 {main} REQUEST_URI=/blog/index.php/user/delete?id=3
+2011/06/15 19:32:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'O token CSRF não pode ser verificado.' in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:864
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CComponent.php(568): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(154): CApplication->onBeginRequest(Object(CEvent))
+#3 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#4 {main} REQUEST_URI=/blog/index.php/user/delete?id=3
+2011/06/15 19:32:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'O token CSRF não pode ser verificado.' in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:864
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CComponent.php(568): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(154): CApplication->onBeginRequest(Object(CEvent))
+#3 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#4 {main} REQUEST_URI=/blog/index.php/user/delete?id=3
+2011/06/15 19:34:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'O token CSRF não pode ser verificado.' in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:864
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CComponent.php(568): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(154): CApplication->onBeginRequest(Object(CEvent))
+#3 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#4 {main} REQUEST_URI=/blog/index.php/user/delete?id=3
+2011/06/15 19:35:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'O token CSRF não pode ser verificado.' in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:864
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CComponent.php(568): CHttpRequest->validateCsrfToken(Object(CEvent))
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(154): CApplication->onBeginRequest(Object(CEvent))
+#3 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#4 {main} REQUEST_URI=/blog/index.php/user/delete?id=3
+2011/06/15 21:41:16 [error] [exception.CException] exception 'CException' with message 'A propriedade "CFilterValidator.0" não está definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(169): CComponent->__set('0', 'validatePasswor...')
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(283): CValidator::createValidator('filter', Object(User), 'password', Array)
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(257): CModel->createValidators()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(548): CModel->getValidators()
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(467): CModel->getSafeAttributeNames()
+#5 C:\xampp\htdocs\yii\framework\base\CComponent.php(152): CModel->setAttributes(Array)
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__set('attributes', Array)
+#7 C:\xampp\htdocs\blog\protected\controllers\UserController.php(71): CActiveRecord->__set('attributes', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionCreate()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('create')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/create')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#21 {main} REQUEST_URI=/blog/index.php/user/create
+2011/06/15 21:44:40 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/15 21:45:01 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/15 22:11:25 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/15 22:11:25 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/15 22:21:40 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/15 22:21:40 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/15 22:21:53 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/15 22:21:53 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/15 22:27:43 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/15 22:27:43 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/16 16:30:01 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/16 16:30:01 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/16 16:35:12 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/16 16:35:12 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/16 16:37:22 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/16 16:37:22 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/16 16:53:13 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/16 16:53:13 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/16 16:56:34 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/16 16:56:34 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/16 17:01:26 [warning] [application] Failed to set unsafe attribute "salt".
+2011/06/16 17:01:26 [warning] [application] Failed to set unsafe attribute "profile".
+2011/06/16 19:43:20 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.rpassword" não está definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(128): CComponent->__get('rpassword')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2050): CActiveRecord->__get('rpassword')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1777): CHtml::resolveValue(Object(User), 'rpassword')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1219): CHtml::activeInputField('password', Object(User), 'rpassword', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activePasswordField(Object(User), 'rpassword', Array)
+#5 C:\xampp\htdocs\blog\protected\views\user\_form.php(26): CActiveForm->passwordField(Object(User), 'rpassword', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\blog\protected\views\user\create.php(15): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\blog\protected\controllers\UserController.php(78): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#28 {main} REQUEST_URI=/blog/index.php/user/create
+2011/06/16 19:44:29 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.rpassword" não está definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(128): CComponent->__get('rpassword')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2050): CActiveRecord->__get('rpassword')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1777): CHtml::resolveValue(Object(User), 'rpassword')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1219): CHtml::activeInputField('password', Object(User), 'rpassword', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activePasswordField(Object(User), 'rpassword', Array)
+#5 C:\xampp\htdocs\blog\protected\views\user\_form.php(26): CActiveForm->passwordField(Object(User), 'rpassword', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\blog\protected\views\user\create.php(15): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\blog\protected\controllers\UserController.php(78): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#28 {main} REQUEST_URI=/blog/index.php/user/create
+2011/06/16 19:51:31 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.rpassword" não está definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(128): CComponent->__get('rpassword')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2050): CActiveRecord->__get('rpassword')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1777): CHtml::resolveValue(Object(User), 'rpassword')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1219): CHtml::activeInputField('password', Object(User), 'rpassword', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activePasswordField(Object(User), 'rpassword', Array)
+#5 C:\xampp\htdocs\blog\protected\views\user\_form.php(26): CActiveForm->passwordField(Object(User), 'rpassword', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\blog\protected\views\user\create.php(15): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(779): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\blog\protected\controllers\UserController.php(78): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#28 {main} REQUEST_URI=/blog/index.php/user/create
+2011/06/16 19:52:47 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:04:16 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:04:42 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:19:41 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:19:55 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:20:25 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:40:54 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:43:43 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:48:53 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:50:52 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:51:42 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:52:23 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:52:23 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.password2" não está definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(128): CComponent->__get('password2')
+#1 C:\xampp\htdocs\yii\framework\validators\CCompareValidator.php(84): CActiveRecord->__get('password2')
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(192): CCompareValidator->validateAttribute(Object(User), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(152): CValidator->validate(Object(User), NULL)
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(778): CModel->validate(NULL)
+#5 C:\xampp\htdocs\blog\protected\controllers\UserController.php(96): CActiveRecord->save()
+#6 [internal function]: UserController->actionUpdate('11')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('update')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/update')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#21 {main} REQUEST_URI=/blog/index.php/user/update?id=11
+2011/06/16 20:52:41 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:52:55 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:53:03 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:53:10 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/16 20:53:40 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/17 20:54:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/17 20:56:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/17 20:57:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('rights')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/rights
+2011/06/17 21:09:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/17 21:09:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/17 21:09:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/17 21:17:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('delete')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/delete')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/delete?id=14
+2011/06/17 21:18:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/17 21:18:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/17 21:19:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 15:59:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 15:59:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "]" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(262): CController->missingAction(']')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run(']')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/]')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#5 {main} REQUEST_URI=/blog/index.php/user/]
+2011/06/20 16:00:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 16:00:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('rights')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/rights
+2011/06/20 16:00:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('rights')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/rights
+2011/06/20 16:02:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('teste')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/teste')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/teste
+2011/06/20 16:03:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('teste')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/teste')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/teste
+2011/06/20 16:03:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('teste')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/teste')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/teste
+2011/06/20 16:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "testea" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(262): CController->missingAction('testea')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('testea')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/testea')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#5 {main} REQUEST_URI=/blog/index.php/user/testea
+2011/06/20 17:20:41 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\blog\protected\views\home\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(866): HomeController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(779): HomeController->renderPartial()
+#2 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(17): HomeController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HomeController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): RightsFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): HomeController->filterRights()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(257): HomeController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): HomeController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/blog/index.php/home/index
+2011/06/20 17:21:07 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\blog\protected\views\home\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(866): HomeController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(779): HomeController->renderPartial()
+#2 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(17): HomeController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HomeController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): RightsFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): HomeController->filterRights()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(257): HomeController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): HomeController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/blog/index.php/home/index
+2011/06/20 19:52:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(119): CAccessControlFilter->accessDenied(Object(RWebUser), 'Voc?? n??o est?...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 19:56:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado para executar esta ação.' in C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\xampp\htdocs\blog\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 19:56:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "admi" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(262): CController->missingAction('admi')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admi')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admi')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#5 {main} REQUEST_URI=/blog/index.php/user/admi
+2011/06/20 19:56:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado para executar esta ação.' in C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\xampp\htdocs\blog\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 19:56:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado para executar esta ação.' in C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\xampp\htdocs\blog\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 19:56:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado para executar esta ação.' in C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\xampp\htdocs\blog\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/admin
+2011/06/20 19:56:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado para executar esta ação.' in C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\xampp\htdocs\blog\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('delete')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('user/delete')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#11 {main} REQUEST_URI=/blog/index.php/user/delete?id=14
+2011/06/20 21:40:06 [error] [php] Undefined variable: message (C:\xampp\htdocs\blog\protected\views\home\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(866): HomeController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(779): HomeController->renderPartial()
+#2 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(29): HomeController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HomeController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): RightsFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): HomeController->filterRights()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(257): HomeController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): HomeController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/blog/index.php/home/index
+2011/06/21 20:04:22 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/21 20:04:30 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/21 20:04:31 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/21 20:04:33 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/21 20:04:34 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/21 20:04:41 [warning] [application] Failed to set unsafe attribute "rpassword".
+2011/06/22 01:14:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiibaseapp.{{user}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{user}}`.
+2011/06/22 01:14:54 [error] [exception.CDbException] exception 'CDbException' with message 'A tabela "{{user}}" da classe de active record "User", não pôde ser encontrada no banco de dados.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2237
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(371): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\xampp\htdocs\blog\protected\models\User.php(22): CActiveRecord::model('User')
+#2 C:\xampp\htdocs\blog\protected\components\UserIdentity.php(18): User::model()
+#3 C:\xampp\htdocs\blog\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(39): LoginForm->authenticate('password', Array)
+#5 C:\xampp\htdocs\yii\framework\validators\CValidator.php(192): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\xampp\htdocs\yii\framework\base\CModel.php(152): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(745): CModel->validate(NULL)
+#8 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(52): CActiveForm::validate(Object(LoginForm))
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionLogin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('login')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/login')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#22 {main} REQUEST_URI=/blog/index.php/home/login
+2011/06/22 01:14:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiibaseapp.{{user}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{user}}`.
+2011/06/22 01:14:55 [error] [exception.CDbException] exception 'CDbException' with message 'A tabela "{{user}}" da classe de active record "User", não pôde ser encontrada no banco de dados.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2237
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(371): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\xampp\htdocs\blog\protected\models\User.php(22): CActiveRecord::model('User')
+#2 C:\xampp\htdocs\blog\protected\components\UserIdentity.php(18): User::model()
+#3 C:\xampp\htdocs\blog\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(39): LoginForm->authenticate('password', Array)
+#5 C:\xampp\htdocs\yii\framework\validators\CValidator.php(192): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\xampp\htdocs\yii\framework\base\CModel.php(152): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(61): CModel->validate()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('login')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/login')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#21 {main} REQUEST_URI=/blog/index.php/home/login
+2011/06/22 01:16:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiibaseapp.{{user}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{user}}`.
+2011/06/22 01:16:45 [error] [exception.CDbException] exception 'CDbException' with message 'A tabela "{{user}}" da classe de active record "User", não pôde ser encontrada no banco de dados.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2237
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(371): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\xampp\htdocs\blog\protected\models\User.php(22): CActiveRecord::model('User')
+#2 C:\xampp\htdocs\blog\protected\components\UserIdentity.php(18): User::model()
+#3 C:\xampp\htdocs\blog\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(39): LoginForm->authenticate('password', Array)
+#5 C:\xampp\htdocs\yii\framework\validators\CValidator.php(192): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\xampp\htdocs\yii\framework\base\CModel.php(152): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\xampp\htdocs\blog\protected\controllers\HomeController.php(61): CModel->validate()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HomeController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\blog\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('login')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('home/login')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#21 {main} REQUEST_URI=/blog/index.php/home/login
+2011/06/22 01:20:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiibaseapp.{{activerecordlog}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{activerecordlog}}`.
+2011/06/22 01:20:37 [error] [exception.CDbException] exception 'CDbException' with message 'A tabela "{{activerecordlog}}" da classe de active record "ActiveRecordLog", não pôde ser encontrada no banco de dados.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2237
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(371): CActiveRecordMetaData->__construct(Object(ActiveRecordLog))
+#1 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(72): CActiveRecord::model('ActiveRecordLog')
+#2 C:\xampp\htdocs\blog\protected\controllers\ActiveRecordLogController.php(130): CActiveDataProvider->__construct('ActiveRecordLog')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): ActiveRecordLogController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1122): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(328): CController->run('')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('activerecordlog')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\blog\index.php(11): CApplication->run()
+#16 {main} REQUEST_URI=/blog/index.php/activerecordlog
